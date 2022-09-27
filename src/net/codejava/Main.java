@@ -4,26 +4,31 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		int dividedPopulation = 592307692;
+		double dividedPopulation = 592307692+(4/13);
 		int givenYears = 3;
 		int desiredYears = 50;
-		System.out.println("If 13 disciples can train 2 people per year, then it will take " 
+		
+		System.out.println("If the disciples can train 2 people per year, then it will take " 
 						+ yearsToConvert(dividedPopulation, givenYears) + " years to convert everyone.");
 		System.out.println();
 		System.out.println("If they want to convert everyone in " + desiredYears 
-						+ " years, then each discple must train " + numberToConvert
+						+ " years, then each disciple must train " + numberToConvert
 						(dividedPopulation,desiredYears) + " people per year.");
 	}
 	
-	public static int yearsToConvert(int p, int g)
+	public static double yearsToConvert(double p, int g)
 	{
-		int years = (p / 2) * g;
-		return years;
+		double years = (double) Math.pow(p,g);
+		years =  (double) Math.log(years); 
+		years = years / ((double) Math.log(g));
+		
+		return Math.round(years);
 	}
 	
-	public static int numberToConvert(int p, int y)
+	public static double numberToConvert(double p, double y)
 	{
-		int num = p/y;
+		double e = 3/y;
+		double num = (Math.pow(p,e)-1);
 		return num;
 	}
 }
