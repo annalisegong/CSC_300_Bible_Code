@@ -2,13 +2,16 @@ package net.codejava;
 
 public class BibleHW1 
 {
-	public static double yearsToConvert(double p, int g)
+	public static int yearsToConvert(long population)
 	{
-		double years = (double) Math.pow(p,g);
-		years =  (double) Math.log(years); 
-		years = years / ((double) Math.log(g));
-		
-		return Math.round(years);
+		long disciples = 13L;
+		int years = 0;
+		while(disciples <= population)
+		{
+			disciples = disciples * 3;
+			years = years + 3; 
+		}
+		return years;
 	}
 	
 	public static double numberToConvert(double p, double y)
