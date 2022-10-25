@@ -12,14 +12,14 @@ public class BibleHW2
 		//long canBeConverted = startPopulation;
 		long totalPopulation = startPopulation;
 		
-		while(years <=72)
+		while(years <= 132)
 		{	
 			if(ageOfStartPopulation == 30)
 			{
 				numOfKids = startPopulation * 2;
 				totalPopulation = totalPopulation + numOfKids;
 			}
-			else if(ageOfStartPopulation > 30 && ageOfStartPopulation < 72)
+			else if(ageOfStartPopulation > 30 || ageOfStartPopulation != 72)
 			{
 				if(ageOfKids == 18) //can start being trained
 				{
